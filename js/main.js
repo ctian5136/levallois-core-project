@@ -2,7 +2,7 @@ let scatterVis;
 let sankeyVis;
 
 
-let csv = "../data/core-data.csv"
+let csv = "/data/core-data.csv"
 
 // read csv data from data folder
 d3.csv(csv).then(csvData => {
