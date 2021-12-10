@@ -9,5 +9,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="d3-sankey" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="d3-collection" level="application" />
+    <orderEntry type="library" name="d3-path" level="application" />
+    <orderEntry type="library" name="d3-array" level="application" />
+    <orderEntry type="library" name="d3-shape" level="application" />
   </component>
 </module>
