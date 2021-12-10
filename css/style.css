@@ -1,0 +1,21 @@
+#layer-box {
+    width: 100%;
+    height: 90px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#selectButton {
+    width: 90px;
+    height: 45px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.link:hover {
+    stroke-opacity: .5;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
