@@ -1,6 +1,7 @@
 let scatterVis;
 let sankeyVis;
-
+let compareVis;
+let imperfectionVis;
 
 let csv = "/data/core-data.csv"
 
@@ -15,6 +16,6 @@ function createVis(data){
 
     scatterVis = new ScatterVis("#scatterVis", data);
     sankeyVis = new SankeyVis("#sankeyVis", data);
-
-
+    compareVis = new CompareVis("#compareVis", data)
+    imperfectionVis = new ImperfectionVis("imperfectionVis", data);
 }
