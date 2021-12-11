@@ -15,7 +15,7 @@ class ImperfectionVis {
         let vis = this;
 
         // set the dimensions and margins of the graph
-        vis.margin = {top: 10, right: 30, bottom: 30, left: 60};
+        vis.margin = {top: 10, right: 30, bottom: 100, left: 60};
         vis.width = 800 - vis.margin.left - vis.margin.right;
         vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
@@ -47,7 +47,7 @@ class ImperfectionVis {
             .attr("text-anchor", "end")
             .attr("x", vis.width)
             .attr("y", vis.height + 30)
-            .text("mass of levallois core (g)");
+            .text("Mass of Levallois Core (g)");
 
         // Add Y axis
         vis.y = d3.scaleLinear()
@@ -56,6 +56,15 @@ class ImperfectionVis {
         vis.yAxis =vis.svg.append("g")
             .attr("class", "axis y-axis")
             .call(d3.axisLeft(vis.y));
+
+        vis.svg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "end")
+            .attr("y", 6)
+            // .attr("x", vis.height)
+            .attr("dy", ".75em")
+            .attr("transform", "rotate(-90)")
+            .text("# of Material Imperfections");
 
         // Color scale: give me a layer name, I return a color
         vis.color = d3.scaleOrdinal()

@@ -15,7 +15,7 @@ class ScatterVis {
         let vis = this;
 
         // set the dimensions and margins of the graph
-        vis.margin = {top: 10, right: 30, bottom: 30, left: 60};
+        vis.margin = {top: 10, right: 30, bottom: 50, left: 60};
         vis.width = 460 - vis.margin.left - vis.margin.right;
         vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
@@ -51,6 +51,13 @@ class ScatterVis {
             .attr("transform", "translate(0," + vis.height + ")")
             .call(d3.axisBottom(vis.x));
 
+        vis.XLabel = vis.svg.append("text")
+            .attr("class", "x label")
+            .attr("text-anchor", "end")
+            .attr("x", vis.width/2 + 100)
+            .attr("y", vis.height + 30)
+            .text("Mass of Levallois Core (g)");
+
         // Add Y axis
         vis.y = d3.scaleBand()
             .domain(layers)
@@ -58,6 +65,15 @@ class ScatterVis {
         vis.yAxis =vis.svg.append("g")
             .attr("class", "axis y-axis")
             .call(d3.axisLeft(vis.y));
+        vis.svg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "end")
+            .attr("x", 3)
+            .attr("dx", "-9em")
+            .attr("y", 6)
+            .attr("dy", "-2.5em")
+            .attr("transform", "rotate(-90)")
+            .text("Layer");
 
         // Color scale: give me a layer name, I return a color
         vis.color = d3.scaleOrdinal()
@@ -121,7 +137,18 @@ class ScatterVis {
 
             vis.setTitle = selectedGroup + " v layers";
 
+            if(selectedGroup == "mass"){
+                var unit = "(g)";
+            } else{
+                unit = "(mm)";
+            }
+
+            vis.setXAxis = selectedGroup + " of Levallois Core " + unit;
+            console.log(vis.setXAxis);
+
             d3.selectAll(vis.title).text(vis.setTitle);
+            d3.selectAll(vis.XLabel).text(vis.setXAxis);
+
 
         }
         // Highlight the layer that is hovered

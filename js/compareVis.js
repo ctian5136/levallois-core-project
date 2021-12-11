@@ -47,7 +47,7 @@ class CompareVis {
             .attr("text-anchor", "end")
             .attr("x", vis.width)
             .attr("y", vis.height + 30)
-            .text("mass of levallois core (g)");
+            .text("Mass of Levallois Core (g)");
 
         // Add Y axis
         vis.y = d3.scaleLinear()
@@ -56,6 +56,14 @@ class CompareVis {
         vis.yAxis =vis.svg.append("g")
             .attr("class", "axis y-axis")
             .call(d3.axisLeft(vis.y));
+        vis.svg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "end")
+            .attr("y", 6)
+            // .attr("x", vis.height)
+            .attr("dy", ".75em")
+            .attr("transform", "rotate(-90)")
+            .text("# of Step Fractures");
 
         // Color scale: give me a layer name, I return a color
         vis.color = d3.scaleOrdinal()
