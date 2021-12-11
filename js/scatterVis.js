@@ -96,8 +96,9 @@ class ScatterVis {
         vis.title = vis.svg.append('g')
             .attr("class", "title")
             .append("text")
-            .text("Mass v Layers")
-            .attr("transform", "translate(" + vis.margin.left + ", "+ 10 + ")");
+            .text("Distribution of the Mass of Levallois Cores (g) v Excavation Layers")
+            .attr("transform", "translate(" + 10 + ", "+ 10 + ")")
+            .style("font-size", 12);
 
         this.wrangleData();
 
@@ -135,13 +136,13 @@ class ScatterVis {
                 .attr("r", 5)
                 .style("fill", function (d) { return vis.color(d.y_axis) } );
 
-            vis.setTitle = selectedGroup + " v layers";
 
             if(selectedGroup == "mass"){
                 var unit = "(g)";
             } else{
                 unit = "(mm)";
             }
+            vis.setTitle = "Distribution of the " + selectedGroup + " of Levallois Cores " + unit + " v Excavation Layers";
 
             vis.setXAxis = selectedGroup + " of Levallois Core " + unit;
             console.log(vis.setXAxis);
