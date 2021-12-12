@@ -3,7 +3,7 @@ let sankeyVis;
 let compareVis;
 let imperfectionVis;
 
-let csv = "/core-data.csv"
+let csv = "/levallois-core-project/core-data.csv"
 
 // read csv data from data folder
 d3.csv(csv).then(csvData => {
