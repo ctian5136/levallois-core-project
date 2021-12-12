@@ -162,8 +162,6 @@ class ScatterVis {
                 vis.selected_layer = d.layer;
             }
 
-            console.log(vis.selected_layer);
-
             d3.selectAll(".dot")
                 .transition()
                 .duration(200)
