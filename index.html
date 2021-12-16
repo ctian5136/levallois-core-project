@@ -11,12 +11,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>
-    Levallois Core Project
-</h1>
+
+<div class ="section" id ="section1">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h1>
+                Welcome to the Levallois Core Project. Explore the visualizations below to learn more about the Levallois Cores from the Skhul collection in the Peabody Museum.
+            </h1>
+
+        </div>
+    </div>
+</div>
+
+<div class ="section" id="scatterExp">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4>
+                The first scatter plot below shows the distributions of measurements of the Levallois Cores by Layer.
+                <br>
+                <br>Hover over the dots in the scatter plot to highlight specific layers and explore how the distributions change by selecting different measurements to focus on in the dropdown menu! The gray box to the side will show you which layer you are selecting.
+            </h4>
+        </div>
+    </div>
+</div>
 
 <div class= "d-flex justify-content-center" id="scatter">
-    <!-- Initialize a select button -->
     <div class="row">
         <div class="col col align-self-center">
             <select id="selectButton"></select>
@@ -29,14 +48,126 @@
         </div>
     </div>
 </div>
+
+<div class ="section" id ="section2">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4>
+                General Observations
+            </h4>
+            <h5><br>
+                In general, the size of the cores leaned towards the smaller side, with the majority, 72 cores, falling below the average mass. As can be seen in the first scatter plot, the layers, with the exception being layer B, have masses pretty clustered together within 0g and 120g, with one or two points being the exceptions with a larger mass. Layer B, however, has the largest range, with some cores as small as 14.8g, and some as large as 715.9g. The subsequent graphs for length, width, and height all show a larger range of measurements in millimeters for all the layers.             </h5>
+        </div>
+    </div>
+</div>
+
+<div class ="section" id="sankeyExp">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4>
+                The Sankey Diagram allows users to easily see the flow of data and how different categorical measurements relate to one another.
+                <br>
+                <br>Hover over the links to see how one characteristic of the cores flows into the distribution of another.
+            </h4>
+        </div>
+        </div>
+</div>
+
 <div class= "d-flex justify-content-center" id="title"></div>
 
 <div class= "d-flex justify-content-center" id="sankeyVis"></div>
 
-<div class= "d-flex justify-content-center" id="compareVis"></div>
+<div class ="section" id ="section3">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4>
+                Sankey Observations
+            </h4>
+            <h5><br>
+                From the visualization, we can see that the majority of the cores came from layer B and that there is an almost even split between cores that had imperfections and cores that did not. Despite layer B making up the majority, the majority of the cores with imperfections all came from layer B1. About one third of the cores from layer B had imperfections, while the other two thirds did not. Of the cores that were on the smaller side, about fifty percent of them had at least one and up to seven imperfections. The other half of the smaller, under 50g cores did not have any imperfections. It was extremely interesting to see the distribution that about half the amount of all the categories of number of imperfections (0, 1-3, 4-7) all linked to and made up the Mass under 50g category. For the cores with 1-3 or 4-7 imperfections, after about 50% of them going to the Mass under 50g node, the rest were split up fairly evenly between the More than 200g node, 50-100g node, and 100-200g node. This is contrary to the cores that did not have imperfections, with the majority of the remaining going to the 50-100g and 100-200g nodes.
 
-<div class= "d-flex justify-content-center" id="imperfectionVis"></div>
+            </h5>
+        </div>
+    </div>
+</div>
 
+<div class ="section" id="compareExp">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4> The scatter plot below shows the distribution of Levallois cores based on their Mass in grams and the number of Step Fractures that they have. <br>
+                <br>Hover over the dots to show the distribution by specific layer.
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class= "d-flex justify-content-center" id="compareVis">
+    <p> selected layer:</p>
+    <div id="layer-box-compare">
+        <div class="child" id="layer-compare" style="width:100px;height:30px; background:#f2f2f2;border:0px solid #000;" align="middle">-</div>
+    </div>
+</div>
+
+<div class ="section" id ="section4">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4>
+                Step Fracture Analysis
+            </h4>
+            <h5><br>
+                Going into this study, my hypothesis was that step fractures and imperfections would cause the early discard of cores, and thus we would see more step fractures in cores that were of a larger mass. However, as can be seen in the 3rd diagram, that hypothesis did not hold. Rather than there being more step fractures towards the larger end of the mass spectrum, the complete opposite occurred and there were more and more step fractures as the cores got smaller. I also visually observed this. The smaller cores either had multiple step fractures close to the perimeter of the upper surface of the core or had a pretty decent last removed flake.
+                This makes me think that perhaps as the core became smaller and smaller, it became harder for the knapper to strike with enough force that a good flake feathers out, causing the step fracture. There also appeared to be more multiple tiny step fractures on the smaller cores, all moving cetripitally around the core. Unless the last flake was a great flake and the core was tiny already, or the last flake completely rendered the core unusable, it seems like the flintknapper would give the tiny cores a couple tries before exhausting it.
+            </h5>
+        </div>
+    </div>
+</div>
+
+<div class ="section" id="impExp">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4> The scatter plot below shows the distribution of Levallois cores based on their Mass in grams and the number of Material Imperfections that they have.
+                <br>
+                <br>
+                Hover over the dots to show the distribution by specific layer.
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class= "d-flex justify-content-center" id="imperfectionVis">
+    <p> selected layer:</p>
+    <div id="layer-box-imp">
+        <div class="child" id="layer-imp" style="width:100px;height:30px; background:#f2f2f2;border:0px solid #000;" align="middle">-</div>
+    </div>
+</div>
+
+<div class ="section" id ="section5">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4>
+                Imperfections Analysis
+            </h4>
+            <h5><br>
+                Originally, I had also thought that material blemishes would act as a factor in early core exhaustion. However, I slowly realized as I was observing each core, there were not that many that had outwardly presenting, visible material imperfections. Only four cores had material blemishes, and of the four, only 3 cores could have been discarded because of the blemish. The other imperfection most likely did not affect the core itself. The material imperfections appeared as a little divot, a hole, a little nodular chunk that protruded out of the center of the rock. The last scatter plot shows the distributions of the material imperfections in comparison to mass. It can be seen that three out of the four cores all weighed under 75g, so were all still considered to be on the smaller side.
+            </h5>
+        </div>
+    </div>
+</div>
+
+<div class ="section" id ="section6">
+    <div class="container-fluid h-100">
+        <div class="row align-content-center">
+            <h4>
+                Conclusion
+            </h4>
+            <h5><br>
+                From looking at the data collected from the Peabody Levallois cores, we can see that imperfections in the cores do not cause early discard, rather are a common occurrence as the cores get smaller and smaller, causing the eventual exhaustion and death of the tiny cores.This theory, though interesting, may not hold true to the data from the entire site. It would be an interesting project to continue this study by obtaining enough data to be representative of the entire site and seeing if any new trends appear and/or if this theory holds.
+                There are not too many studies focusing on the lithics found in Skhūl, but in a study comparing Levallois cores between Skhul and those found in Africa and Arabia, the Skhul cores “appear to have been discarded in larger sizes” (Blinkhorn, 2021). This triggers my curiosity because it is difficult to imagine the tiny Levallois cores becoming even smaller. It would be intriguing to see if their observations in that study hold up–with more data collected on the Skhūl site. I would love to compare the collections from Africa and Arabia that they studied to see if my theory about smaller core step-fracture-to-discard holds up for them as well.
+
+            </h5>
+        </div>
+    </div>
+</div>
 
 <!-- d3 -->
 <script src="https://d3js.org/d3.v7.min.js"></script>

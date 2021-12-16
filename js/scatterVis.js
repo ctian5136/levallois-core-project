@@ -96,7 +96,7 @@ class ScatterVis {
         vis.title = vis.svg.append('g')
             .attr("class", "title")
             .append("text")
-            .text("Distribution of the Mass of Levallois Cores (g) v Excavation Layers")
+            .text("Distribution of the Mass of Levallois Cores (g) v. Excavation Layers")
             .attr("transform", "translate(" + 10 + ", "+ 10 + ")")
             .style("font-size", 12);
 
@@ -142,7 +142,7 @@ class ScatterVis {
             } else{
                 unit = "(mm)";
             }
-            vis.setTitle = "Distribution of the " + selectedGroup + " of Levallois Cores " + unit + " v Excavation Layers";
+            vis.setTitle = "Distribution of the " + selectedGroup + " of Levallois Cores " + unit + " v. Excavation Layers";
 
             vis.setXAxis = selectedGroup + " of Levallois Core " + unit;
             console.log(vis.setXAxis);

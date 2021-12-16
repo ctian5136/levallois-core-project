@@ -86,7 +86,7 @@ class CompareVis {
         vis.title = vis.svg.append('g')
             .attr("class", "title")
             .append("text")
-            .text("Mass v # of step fractures")
+            .text("Mass v. # of step fractures")
             .attr("transform", "translate(" + vis.margin.left + ", "+ 10 + ")");
 
         this.wrangleData();
@@ -114,7 +114,7 @@ class CompareVis {
                 .style("fill", vis.color(vis.selected_layer))
                 .attr("r", 7);
 
-            d3.select('#layer')
+            d3.select('#layer-compare')
                 .text(vis.selected_layer);
         }
 
@@ -133,7 +133,7 @@ class CompareVis {
                 })
                 .attr("r", 5);
 
-            d3.select('#layer')
+            d3.select('#layer-compare')
                 .text("-");
         }
 
